@@ -1,6 +1,11 @@
 {
   "name": "fis-angular-libraries",
   "version": "0.0.1",
+  "repository": {
+    "directory": "https://github.com/ferreira-it-solutions/fis-angular-lib",
+    "type": "git"
+  },
+  
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

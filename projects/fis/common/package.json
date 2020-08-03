@@ -1,0 +1,15 @@
+{
+  "name": "@fis/common",
+  "version": "0.0.1",
+  "scripts": {
+    "postinstall": "ngcc"
+  },
+  "peerDependencies": {
+    "@angular/common": "^9.0.3",
+    "@angular/core": "^9.0.3",
+    "@angular/forms": "~9.0.1",
+    "@angular/material": "^9.1.0",
+    "scss-layout": "0.0.6",
+    "tslib": "^1.10.0"
+  }
+}

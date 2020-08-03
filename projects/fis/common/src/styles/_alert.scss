@@ -1,0 +1,105 @@
+$success: #28a745;
+$error: #dc3545;
+$info: #23b9e2;
+$warning: #fdb913;
+$default: #1c4a70;
+
+.mat-snack-bar-container {
+  span {
+    color: #ffffff !important;
+  }
+  &.success {
+    background-color: $success;
+  }
+  &.warning {
+    background-color: $warning;
+  }
+  &.error {
+    background-color: $error;
+  }
+  &.info {
+    background-color: $info;
+  }
+  &.default {
+    background-color: $default;
+  }
+}
+
+.icon-dialog {
+  font-size: 36px !important;
+  height: 36px !important;
+  width: 36px !important;
+
+  &.default {
+    color: $default !important;
+  }
+
+  &.error {
+    color: $error !important;
+  }
+
+  &.warning {
+    color: $warning !important;
+  }
+
+  &.info {
+    color: $info !important;
+  }
+
+  &.success {
+    color: $success !important;
+  }
+}
+
+.alert-button {
+  &.mat-flat-button {
+    color: #fff !important;
+    &.default {
+      background-color: $default !important;
+    }
+
+    &.error {
+      background-color: $error !important;
+    }
+
+    &.warning {
+      background-color: $warning !important;
+    }
+
+    &.info {
+      background-color: $info !important;
+    }
+
+    &.success {
+      background-color: $success !important;
+    }
+  }
+  &.mat-stroked-button {
+    border-width: 2px !important;
+    &.default {
+      color: $default !important;
+      border-color: $default !important;
+      font-weight: bold;
+    }
+    &.error {
+      color: $error !important;
+      border-color: $error !important;
+      font-weight: bold;
+    }
+    &.warning {
+      color: $warning !important;
+      border-color: $warning !important;
+      font-weight: bold;
+    }
+    &.info {
+      color: $info !important;
+      border-color: $info !important;
+      font-weight: bold;
+    }
+    &.success {
+      color: $success !important;
+      border-color: $success !important;
+      font-weight: bold;
+    }
+  }
+}

@@ -6,60 +6,38 @@ $alert-default: #9e9e9e;
 $alert-accent: #ff5722;
 $alert-primary: #3f51b5;
 
-.mat-snack-bar-container {
+$host-alert-success: var(--alert-success, $alert-success);
+$host-alert-warning: var(--alert-warning, $alert-warning);
+$host-alert-error: var(--alert-error, $alert-error);
+$host-alert-info: var(--alert-info, $alert-info);
+$host-alert-default: var(--alert-default, $alert-default);
+$host-alert-accent: var(--alert-accent, $alert-accent);
+$host-alert-primary: var(--alert-primary, $alert-primary);
+
+.mat-mdc-simple-snack {
   span {
     color: #fff !important;
   }
   &.success {
-    // if has var then use var, else use default
-
-    @if global-variable-exists(alert-success) {
-      background-color: var(--alert-success) !important;
-    } @else {
-      background-color: $alert-success !important;
-    }
+    background-color: $host-alert-success !important;
   }
   &.warning {
-    @if global-variable-exists(alert-warning) {
-      background-color: var(--alert-warning) !important;
-    } @else {
-      background-color: $alert-warning !important;
-    }
+    background-color: $host-alert-warning !important;
   }
   &.error {
-    @if global-variable-exists(alert-error) {
-      background-color: var(--alert-error) !important;
-    } @else {
-      background-color: $alert-error !important;
-    }
+    background-color: $host-alert-error !important;
   }
   &.info {
-    @if global-variable-exists(alert-info) {
-      background-color: var(--alert-info) !important;
-    } @else {
-      background-color: $alert-info !important;
-    }
+    background-color: $host-alert-info !important;
   }
   &.default {
-    @if global-variable-exists(alert-default) {
-      background-color: var(--alert-default) !important;
-    } @else {
-      background-color: $alert-default !important;
-    }
+    background-color: $host-alert-default !important;
   }
   &.accent {
-    @if global-variable-exists(alert-accent) {
-      background-color: var(--alert-accent) !important;
-    } @else {
-      background-color: $alert-accent !important;
-    }
+    background-color: $host-alert-accent !important;
   }
   &.primary {
-    @if global-variable-exists(alert-primary) {
-      background-color: var(--alert-primary) !important;
-    } @else {
-      background-color: $alert-primary !important;
-    }
+    background-color: $host-alert-primary !important;
   }
 
   .mat-simple-snack-bar-content {
@@ -67,159 +45,73 @@ $alert-primary: #3f51b5;
   }
 }
 
-
-
-.alert-dialog {
-  mat-icon {
-    &.mat {
-      &-success {
-        @if global-variable-exists(alert-success) {
-          color: var(--alert-success) !important;
-        } @else {
-          color: $alert-success !important;
-        }
-      }
-      &-warning {
-        @if global-variable-exists(alert-warning) {
-          color: var(--alert-warning) !important;
-        } @else {
-          color: $alert-warning !important;
-        }
-      }
-      &-error {
-        @if global-variable-exists(alert-error) {
-          color: var(--alert-error) !important;
-        } @else {
-          color: $alert-error !important;
-        }
-      }
-      &-info {
-        @if global-variable-exists(alert-info) {
-          color: var(--alert-info) !important;
-        } @else {
-          color: $alert-info !important;
-        }
-      }
-      &-default {
-        @if global-variable-exists(alert-default) {
-          color: var(--alert-default) !important;
-        } @else {
-          color: $alert-default !important;
-        }
-      }
-    }
-  }
-}
-
 .alert-button {
   color: #fff !important;
+
+  &.accent {
+    background-color: $host-alert-accent !important;
+  }
+
+  &.primary {
+    background-color: $host-alert-primary !important;
+  }
+
   &.error {
-    @if global-variable-exists(alert-error) {
-      background-color: var(--alert-error) !important;
-    } @else {
-      background-color: $alert-error !important;
-    }
+    background-color: $host-alert-error !important;
   }
 
   &.warning {
-    @if global-variable-exists(alert-warning) {
-      background-color: var(--alert-warning) !important;
-    } @else {
-      background-color: $alert-warning !important;
-    }
+    background-color: $host-alert-warning !important;
   }
 
   &.info {
-    @if global-variable-exists(alert-info) {
-      background-color: var(--alert-info) !important;
-    } @else {
-      background-color: $alert-info !important;
-    }
-    border: none !important;
+    background-color: $host-alert-info !important;
   }
 
   &.success {
-    @if global-variable-exists(alert-success) {
-      background-color: var(--alert-success) !important;
-    } @else {
-      background-color: $alert-success !important;
-    }
+    background-color: $host-alert-success !important;
   }
+
   &.default {
-    @if global-variable-exists(alert-default) {
-      background-color: var(--alert-default) !important;
-    } @else {
-      background-color: $alert-default !important;
-    }
+    background-color: $host-alert-default !important;
   }
-  &.primary {
-    @if global-variable-exists(alert-primary) {
-      background-color: var(--alert-primary) !important;
-    } @else {
-      background-color: $alert-primary !important;
+
+  &.mat-mdc-outlined-button {
+    background-color: transparent !important;
+
+    &.accent {
+      border-color: $host-alert-accent !important;
+      color: $host-alert-accent !important;
     }
-  }
-  &.accent {
-    @if global-variable-exists(alert-accent) {
-      background-color: var(--alert-accent) !important;
-    } @else {
-      background-color: $alert-accent !important;
+
+    &.primary {
+      border-color: $host-alert-primary !important;
+      color: $host-alert-primary !important;
     }
-  }
-  &.mat-stroked-button {
-    background: transparent !important;
 
     &.error {
-      @if global-variable-exists(alert-error) {
-        border: 2px solid var(--alert-error) !important;
-      } @else {
-        border: 2px solid $alert-error !important;
-      }
+      border-color: $host-alert-error !important;
+      color: $host-alert-error !important;
     }
 
     &.warning {
-      @if global-variable-exists(alert-warning) {
-        border: 2px solid var(--alert-warning) !important;
-      } @else {
-        border: 2px solid $alert-warning !important;
-      }
+      border-color: $host-alert-warning !important;
+      color: $host-alert-warning !important;
     }
 
     &.info {
-      @if global-variable-exists(alert-info) {
-        border: 2px solid var(--alert-info) !important;
-      } @else {
-        border: 2px solid $alert-info !important;
-      }
+      border-color: $host-alert-info !important;
+      color: $host-alert-info !important;
     }
 
     &.success {
-      @if global-variable-exists(alert-success) {
-        border: 2px solid var(--alert-success) !important;
-      } @else {
-        border: 2px solid $alert-success !important;
-      }
+      border-color: $host-alert-success !important;
+      color: $host-alert-success !important;
     }
+
     &.default {
-      @if global-variable-exists(alert-default) {
-        border: 2px solid var(--alert-default) !important;
-      } @else {
-        border: 2px solid $alert-default !important;
-      }
-    }
-    &.accent {
-      @if global-variable-exists(alert-accent) {
-        border: 2px solid var(--alert-accent) !important;
-      } @else {
-        border: 2px solid $alert-accent !important;
-      }
-    }
-    &.primary {
-      @if global-variable-exists(alert-primary) {
-        border: 2px solid var(--alert-primary) !important;
-      } @else {
-        border: 2px solid $alert-primary !important;
-      }
+      border-color: $host-alert-default !important;
+      color: $host-alert-default !important;
     }
   }
 }

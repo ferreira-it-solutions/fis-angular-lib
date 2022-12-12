@@ -6,6 +6,9 @@
       "@fis-lib/mat-alert": [
         "dist/fis-lib/mat-alert"
       ],
+      "@fis-lib/no-data": [
+        "dist/fis-lib/no-data"
+      ],
       "@fis-lib/skeleton-loading": [
         "dist/fis-lib/skeleton-loading"
       ],

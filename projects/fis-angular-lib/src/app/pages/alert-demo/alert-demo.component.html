@@ -1,0 +1,180 @@
+<div class="py-50 px-150">
+  <div class="fx-col fx-start-center fx-gap-30">
+    <mat-radio-group [(ngModel)]="type" name="type" class="fx-row fx-gap-20">
+      <mat-radio-button [value]="'snack'">Snackbar</mat-radio-button>
+      <mat-radio-button [value]="'dialog'">Dialog</mat-radio-button>
+    </mat-radio-group>
+    <div class="w100 fx-start-center fx-row fx-gap-30" *ngIf="type == 'dialog'">
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Título"
+          [(ngModel)]="alert.title"
+          name="alert.title"
+        />
+      </mat-form-field>
+      <mat-slide-toggle [(ngModel)]="alert.hasModel" name="alert.hasModel">
+        Input
+      </mat-slide-toggle>
+      <mat-form-field>
+        <input
+          [disabled]="!alert.hasModel"
+          matInput
+          placeholder="Valor"
+          [(ngModel)]="alert.model"
+          name="alert.model"
+        />
+      </mat-form-field>
+    </div>
+    <div class="w100 fx-start-center fx-row fx-gap-30" *ngIf="type == 'dialog'">
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="width"
+          [(ngModel)]="alert.width"
+          name="alert.width"
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="minWidth"
+          [(ngModel)]="alert.minWidth"
+          name="alert.minWidth"
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="maxWidth"
+          [(ngModel)]="alert.maxWidth"
+          name="alert.maxWidth"
+        />
+      </mat-form-field>
+    </div>
+    <div class="w100 fx-start-center fx-row fx-gap-30" *ngIf="type == 'dialog'">
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="height"
+          [(ngModel)]="alert.height"
+          name="alert.height"
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="minHeight"
+          [(ngModel)]="alert.minHeight"
+          name="alert.minHeight"
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="maxHeight"
+          [(ngModel)]="alert.maxHeight"
+          name="alert.maxHeight"
+        />
+      </mat-form-field>
+    </div>
+    <div class="w100 fx-row fx-gap-30">
+      <mat-form-field>
+        <textarea
+          matInput
+          placeholder="Mensagem"
+          [(ngModel)]="alert.message"
+          name="alert.message"
+        ></textarea>
+      </mat-form-field>
+      <mat-form-field *ngIf="type === 'dialog'">
+        <textarea
+          matInput
+          placeholder="Inner HTML"
+          [(ngModel)]="alert.innerHTML"
+          name="alert.innerHTML"
+        ></textarea>
+      </mat-form-field>
+    </div>
+    <div class="w100 fx-row fx-start-center fx-gap-30">
+      <mat-form-field class="fx-25">
+        <mat-label>Tipo</mat-label>
+        <mat-select
+          name="alert.type"
+          [(ngModel)]="alert.type"
+          [compareWith]="compare"
+        >
+          <mat-option *ngFor="let type of types" [value]="type">
+            {{ type }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <ng-container *ngIf="type === 'snack'">
+        <mat-form-field>
+          <mat-label>Duração</mat-label>
+          <mat-select
+            name="alert.duration"
+            [(ngModel)]="alert.duration"
+            [compareWith]="compare"
+          >
+            <mat-option *ngFor="let duration of durations" [value]="duration">
+              {{ (duration * alertMinTime) / 1000 + " segundos" }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field class="fx-25">
+          <mat-label>Posição vertical</mat-label>
+          <mat-select
+            name="alert.verticalPosition"
+            [(ngModel)]="alert.verticalPosition"
+            [compareWith]="compare"
+          >
+            <mat-option *ngFor="let pos of verticalPos" [value]="pos">
+              {{ pos }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field class="fx-25">
+          <mat-label>Posição horizontal</mat-label>
+          <mat-select
+            name="alert.horizontalPosition"
+            [(ngModel)]="alert.horizontalPosition"
+            [compareWith]="compare"
+          >
+            <mat-option *ngFor="let pos of horizontalPos" [value]="pos">
+              {{ pos }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </ng-container>
+      <ng-container *ngIf="type === 'dialog'">
+        <mat-form-field *ngIf="type === 'dialog'">
+          <input
+            matInput
+            placeholder="Texto OK"
+            [(ngModel)]="alert.okText"
+            name="alert.okText"
+          />
+        </mat-form-field>
+        <mat-slide-toggle [(ngModel)]="alert.noClick" name="alert.noClick">
+          Botão Cancelar
+        </mat-slide-toggle>
+        <mat-form-field *ngIf="type === 'dialog'">
+          <input
+            [disabled]="!alert.noClick"
+            matInput
+            placeholder="Texto Cancelar"
+            [(ngModel)]="alert.noText"
+            name="alert.noText"
+          />
+        </mat-form-field>
+      </ng-container>
+    </div>
+    <button class="w100" mat-button [ngClass]="alert.type" (click)="dispatch()">
+      {{ alert.label }}
+    </button>
+    <div class="code p-20 w100 fx-between-center">
+      <pre class="p-0 m-0">{{ call }}</pre>
+    </div>
+  </div>
+</div>

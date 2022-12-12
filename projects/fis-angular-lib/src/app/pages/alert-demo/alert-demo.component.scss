@@ -1,0 +1,62 @@
+// @import "src/styles/layout/variables";
+
+.alert-box {
+  margin: auto;
+  width: 70%;
+}
+
+.mat-button {
+  color: #fff !important;
+}
+
+.code {
+  background-color: #d4d4d4;
+  border-radius: 15px;
+
+  button {
+    visibility: hidden;
+  }
+
+  &:hover {
+    button {
+      visibility: visible;
+    }
+  }
+
+  pre {
+    font-size: 14px;
+    font-weight: bold;
+  }
+}
+
+.mat-mdc-button {
+  color: #fff !important;
+
+  &.default {
+    background-color: #3f51b5;
+  }
+
+  &.primary {
+    background-color: #2196f3;
+  }
+
+  &.warning {
+    background-color: #f44336;
+  }
+
+  &.success {
+    background-color: #4caf50;
+  }
+
+  &.info {
+    background-color: #00bcd4;
+  }
+
+  &.error {
+    background-color: #f44336;
+  }
+
+  &.accent {
+    background-color: #ff9800;
+  }
+}

@@ -57,9 +57,10 @@ export class FisMatAlertService {
       // maxHeight: data.maxHeight || 'auto',
       // width: data.width || '100%',
       // height: data.height || 'auto',
-      // minWidth: data.minWidth || 'auto',
+      minWidth: data.minWidth || '25%',
       // minHeight: data.minHeight || 'auto',
       data,
+      autoFocus: false,
     });
 
     dialogRef.afterClosed().subscribe((result: DialogActionData) => {

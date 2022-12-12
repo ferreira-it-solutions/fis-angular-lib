@@ -233,6 +233,39 @@
           }
         }
       }
+    },
+    "@fis-lib/no-data": {
+      "projectType": "library",
+      "root": "projects/fis-lib/no-data",
+      "sourceRoot": "projects/fis-lib/no-data/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/fis-lib/no-data/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/fis-lib/no-data/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/fis-lib/no-data/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/fis-lib/no-data/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
     }
   }
 }

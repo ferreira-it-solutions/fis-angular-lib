@@ -2,6 +2,20 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "@fis-lib/mat-alert": [
+        "dist/fis-lib/mat-alert"
+      ],
+      "@fis-lib/skeleton-loading": [
+        "dist/fis-lib/skeleton-loading"
+      ],
+      "@fis/mat-alert": [
+        "dist/fis/mat-alert"
+      ],
+      "@fis/skeleton-loading": [
+        "dist/fis/skeleton-loading"
+      ]
+    },
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,

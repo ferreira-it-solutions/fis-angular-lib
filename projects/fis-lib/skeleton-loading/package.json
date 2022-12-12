@@ -1,0 +1,19 @@
+{
+  "name": "@fis-lib/skeleton-loading",
+  "version": "0.0.8",
+  "author": {
+    "name": "Rubens Ferreira",
+    "email": "rubens.ferreira@ferreiraitsolutions.dev"
+  },
+  "peerDependencies": {
+    "@angular/common": "^15.0.0",
+    "@angular/core": "^15.0.0",
+    "scss-layout": "^0.2.1"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "exports": {
+    "./core.scss": "./scss/core.scss"
+  }
+}

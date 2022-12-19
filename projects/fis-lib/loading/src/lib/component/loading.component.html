@@ -1,0 +1,16 @@
+<div class="backdrop-loading" *ngIf="loading">
+  <div class="loading__box">
+    <div
+      class="loading__item loading-bg-item loading-bg-item__primary"
+      [style.background-color]="config.primaryColor"
+    ></div>
+    <div
+      class="loading__item loading-bg-item loading-bg-item__secondary"
+      [style.background-color]="config.secondaryColor"
+    ></div>
+    <div
+      class="loading__item loading-bg-item loading-bg-item__tertiary"
+      [style.background-color]="config.tertiaryColor"
+    ></div>
+  </div>
+</div>

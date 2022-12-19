@@ -1,11 +1,12 @@
 .mat-dialog-actions {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
 
-    .invert {
-        flex-direction: row-reverse !important;
-        gap: 12px !important;
-    }
+  .invert {
+    flex-direction: row-reverse !important;
+    gap: 12px !important;
+  }
 }
+

@@ -14,29 +14,32 @@ $host-alert-default: var(--alert-default, $alert-default);
 $host-alert-accent: var(--alert-accent, $alert-accent);
 $host-alert-primary: var(--alert-primary, $alert-primary);
 
-.mat-mdc-simple-snack {
+// mdc-snackbar mat-mdc-snack-bar-container mdc-snackbar--open ng-tns-c104-11 ng-trigger ng-trigger-state success ng-star-inserted
+
+.mat-mdc-snack-bar-container {
   span {
     color: #fff !important;
   }
-  &.success {
+
+  &.success .mdc-snackbar__surface {
     background-color: $host-alert-success !important;
   }
-  &.warning {
+  &.warning .mdc-snackbar__surface {
     background-color: $host-alert-warning !important;
   }
-  &.error {
+  &.error .mdc-snackbar__surface {
     background-color: $host-alert-error !important;
   }
-  &.info {
+  &.info .mdc-snackbar__surface {
     background-color: $host-alert-info !important;
   }
-  &.default {
+  &.default .mdc-snackbar__surface {
     background-color: $host-alert-default !important;
   }
-  &.accent {
+  &.accent .mdc-snackbar__surface {
     background-color: $host-alert-accent !important;
   }
-  &.primary {
+  &.primary .mdc-snackbar__surface {
     background-color: $host-alert-primary !important;
   }
 
@@ -47,6 +50,7 @@ $host-alert-primary: var(--alert-primary, $alert-primary);
 
 .alert-button {
   color: #fff !important;
+  min-width: 75px !important;
 
   &.accent {
     background-color: $host-alert-accent !important;
@@ -114,4 +118,8 @@ $host-alert-primary: var(--alert-primary, $alert-primary);
       color: $host-alert-default !important;
     }
   }
+}
+
+.mat-mdc-dialog-container {
+  --mdc-dialog-subhead-size: 20px !important;
 }

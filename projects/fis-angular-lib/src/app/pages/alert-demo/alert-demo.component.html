@@ -118,7 +118,7 @@
             [compareWith]="compare"
           >
             <mat-option *ngFor="let duration of durations" [value]="duration">
-              {{ (duration * alertMinTime) / 1000 + " segundos" }}
+              {{ (duration * 500) / 1000 + " segundos" }}
             </mat-option>
           </mat-select>
         </mat-form-field>

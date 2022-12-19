@@ -40,7 +40,7 @@ import { Component, Input } from '@angular/core';
     `,
   ]
 })
-export class SkeletonLoadingComponent {
+export class FisSkeletonLoadingComponent {
   @Input() classes: string = '';
   @Input() parentClasses: string = '';
   @Input() width: string = '100%';

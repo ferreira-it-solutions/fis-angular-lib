@@ -3,6 +3,9 @@
   "compileOnSave": false,
   "compilerOptions": {
     "paths": {
+      "@fis-lib/loading": [
+        "dist/fis-lib/loading"
+      ],
       "@fis-lib/mat-alert": [
         "dist/fis-lib/mat-alert"
       ],

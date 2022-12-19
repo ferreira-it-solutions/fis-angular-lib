@@ -3,14 +3,16 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve fis-angular-lib --host=127.0.0.1",
+    "start": "ng serve fis-angular-lib --host=127.0.0.1 --port=4300",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "build:lib-skeleton": "ng build @fis-lib/skeleton-loading",
     "publish:lib-skeleton": "ng build @fis-lib/skeleton-loading && npm publish dist/fis-lib/skeleton-loading",
     "build:lib-alert": "ng build @fis-lib/mat-alert --watch",
-    "publish:lib-alert": "ng build @fis-lib/mat-alert && npm publish dist/fis-lib/mat-alert"
+    "publish:lib-alert": "ng build @fis-lib/mat-alert && npm publish dist/fis-lib/mat-alert",
+    "build:lib-loading": "ng build @fis-lib/loading --watch",
+    "publish:lib-loading": "ng build @fis-lib/loading && npm publish dist/fis-lib/loading"
   },
   "private": true,
   "dependencies": {

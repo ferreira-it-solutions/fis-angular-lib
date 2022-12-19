@@ -5,19 +5,16 @@ import {
   AlertTime,
   AlertType,
   FisMatAlertService
-} from '@fis-lib/mat-alert';
-
+} from 'projects/fis-lib/mat-alert/src/public-api';
 @Component({
   selector: 'app-alert-demo',
   templateUrl: './alert-demo.component.html',
   styleUrls: ['./alert-demo.component.scss'],
 })
 export class AlertDemoComponent {
-
   compare = (a: any, b: any) => a == b;
 
-  alertMinTime = 500;
-  type: 'snack' | 'dialog' = 'dialog';
+  type: 'snack' | 'dialog' = 'snack';
 
   alert: {
     title?: string;
@@ -73,9 +70,7 @@ export class AlertDemoComponent {
     (k) => (AlertPositionVertical as any)[k]
   );
 
-  constructor(
-    public alertService: FisMatAlertService,
-  ) {}
+  constructor(public alertService: FisMatAlertService) {}
 
   dispatch() {
     if (this.type === 'snack') {
@@ -108,7 +103,7 @@ export class AlertDemoComponent {
           maxWidth: this.alert.maxWidth,
           maxHeight: this.alert.maxHeight,
         },
-        (param) => {
+        (param: any) => {
           if (param) {
             this.alertService.snack(
               `Clicou em ${
